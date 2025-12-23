@@ -1,11 +1,13 @@
-name: Auto Verify Task
+name: Military Offer Automation
 
 on:
-  workflow_dispatch: # 手动触发
+  workflow_dispatch:
 
 jobs:
-  build:
+  automation:
     runs-on: ubuntu-latest
+    permissions: # 关键：赋予写入权限
+      contents: write
 
     steps:
       - name: Checkout Code
@@ -20,14 +22,16 @@ jobs:
         run: |
           pip install selenium webdriver-manager
 
-      - name: Run Script
+      - name: Run Python Script
         run: python run_task.py
 
-      - name: Sync Logs
-        # 将生成的 used_records.txt 提交回仓库，确保下次运行能自动跳过已用数据
+      - name: Commit and Sync Logs
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add used_records.txt || echo "No log file to add"
-          git commit -m "Update used records [skip ci]" || echo "No changes to commit"
-          git push
+          # 如果文件存在则更新
+          if [ -f used_records.txt ]; then
+            git add used_records.txt
+            git commit -m "Update logs [skip ci]" || echo "No changes"
+            git push origin main
+          fi
