@@ -1,12 +1,12 @@
-name: Military Offer Automation
+name: SheerID Automation
 
 on:
   workflow_dispatch:
 
 jobs:
-  automation:
+  run-task:
     runs-on: ubuntu-latest
-    permissions: # 关键：赋予写入权限
+    permissions:
       contents: write
 
     steps:
@@ -22,14 +22,21 @@ jobs:
         run: |
           pip install selenium webdriver-manager
 
-      - name: Run Python Script
+      - name: Run Script
         run: python run_task.py
+
+      - name: Upload Screenshot on Failure
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: error-screenshots
+          path: ./*.png
 
       - name: Commit and Sync Logs
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          # 如果文件存在则更新
+          git pull origin main
           if [ -f used_records.txt ]; then
             git add used_records.txt
             git commit -m "Update logs [skip ci]" || echo "No changes"
