@@ -1,0 +1,35 @@
+name: Auto Verify Military Offer
+
+on:
+  workflow_dispatch: # 允许你在 GitHub 页面手动点击按钮运行
+  # schedule:
+  #   - cron: '0 8 * * *' # 可选：每天北京时间下午 4 点自动运行
+
+jobs:
+  run-automation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install selenium
+
+      - name: Run Python Script
+        run: python run_task.py
+
+      - name: Commit and Push Changes
+        # 这个步骤会将脚本生成的 used_records.txt 更新回仓库，实现自动屏蔽功能
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add used_records.txt
+          git commit -m "Update used records [skip ci]" || echo "No changes to commit"
+          git push
