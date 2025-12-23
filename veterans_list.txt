@@ -1,0 +1,199 @@
+Army | Salvatore Giunta | 1985/01/21 | 2025/01/25
+
+Marine Corps | Dakota Meyer | 1988/06/26 | 2025/05/20
+
+Army | Ryan Pitts | 1985/10/01 | 2025/08/15
+
+Navy | Zach Bryan | 1996/05/25 | 2025/02/14
+
+Army | Kyle White | 1987/02/12 | 2025/06/30
+
+Marine Corps | Kyle Carpenter | 1989/10/17 | 2025/11/10
+
+Army | Daniel Rodriguez | 1988/10/23 | 2025/07/04
+
+Army | Florent Groberg | 1985/11/07 | 2025/08/01
+
+Army | Brandon Smith | 1994/06/07 | 2025/05/15
+
+Navy | Marcus Miller | 1998/08/20 | 2025/10/18
+
+Air Force | Jordan Williams | 1995/11/05 | 2025/12/01
+
+Army | Sarah Evans | 1990/04/14 | 2025/03/22
+
+Army | Jacob Johnson | 1997/12/30 | 2025/11/25
+
+Marine Corps | Tyler Anderson | 1991/01/15 | 2025/04/01
+
+Navy | William Wood | 1992/03/12 | 2025/09/11
+
+Army | Justin Higgins | 1986/05/19 | 2025/02/28
+
+Air Force | Megan Taylor | 1993/07/22 | 2025/06/15
+
+Marine Corps | Travis Moore | 1999/11/03 | 2025/08/20
+
+Army | Cody Foster | 1987/12/09 | 2025/10/31
+
+Navy | Christopher Reed | 1994/02/25 | 2025/01/10
+
+Army | Nicholas Palmer | 1990/08/14 | 2025/05/05
+
+Air Force | Samantha Kelly | 1996/03/17 | 2025/09/30
+
+Marine Corps | Joshua Bryant | 1985/06/30 | 2025/04/18
+
+Army | Ethan Sullivan | 1992/10/12 | 2025/07/12
+
+Navy | Austin Howard | 1998/04/05 | 2025/11/11
+
+Army | Brianna Ward | 1995/09/21 | 2025/03/15
+
+Marine Corps | Dylan Scott | 1991/12/01 | 2025/06/22
+
+Army | Matthew Ross | 1989/01/14 | 2025/12/20
+
+Air Force | Ashley Cooper | 1997/05/18 | 2025/02/05
+
+Army | Gabriel Perry | 1993/11/27 | 2025/08/08
+
+Navy | Kevin Long | 1986/07/04 | 2025/05/25
+
+Marine Corps | Zachary Gray | 1994/08/11 | 2025/10/01
+
+Army | Rachel Simmons | 1990/02/20 | 2025/01/30
+
+Air Force | Tyler Brooks | 1999/06/12 | 2025/04/14
+
+Army | Sean Mendez | 1988/03/25 | 2025/07/19
+
+Navy | Maria Foster | 1996/10/08 | 2025/09/05
+
+Marine Corps | Caleb Jenkins | 1992/05/30 | 2025/11/15
+
+Army | Hunter Coleman | 1987/09/14 | 2025/03/03
+
+Army | Victoria Price | 1995/12/12 | 2025/06/10
+
+Air Force | Logan Powell | 1991/04/22 | 2025/12/15
+
+Navy | Jared Butler | 1985/11/19 | 2025/02/20
+
+Marine Corps | Isaac Henderson | 1998/01/07 | 2025/05/12
+
+Army | Madison Barnes | 1993/08/15 | 2025/08/25
+
+Army | Nathan Russell | 1990/07/01 | 2025/10/10
+
+Navy | Alexis Hayes | 1997/03/29 | 2025/01/05
+
+Army | Christian Webb | 1989/10/05 | 2025/04/30
+
+Air Force | Haley Patterson | 1994/05/14 | 2025/07/28
+
+Marine Corps | Blake Simmons | 1986/12/22 | 2025/11/30
+
+Army | Andrew Griffin | 1992/06/18 | 2025/09/14
+
+Navy | Morgan Peterson | 1999/02/09 | 2025/06/01
+
+Army | Jonathan Diaz | 1985/04/11 | 2025/02/11
+
+Air Force | Lauren Reynolds | 1996/09/03 | 2025/05/22
+
+Marine Corps | Jeremiah Ellis | 1991/03/15 | 2025/10/15
+
+Army | Sydney Stevens | 1993/01/24 | 2025/08/12
+
+Army | Jordan Marshall | 1998/07/19 | 2025/12/05
+
+Navy | Trevor Hart | 1987/11/02 | 2025/04/04
+
+Marine Corps | Seth Alexander | 1994/12/28 | 2025/01/18
+
+Air Force | Paige Hamilton | 1990/10/10 | 2025/03/27
+
+Army | Cameron Graham | 1986/02/14 | 2025/07/14
+
+Army | Marissa Sullivan | 1997/08/01 | 2025/11/01
+
+Navy | Dalton Hicks | 1992/09/09 | 2025/06/18
+
+Marine Corps | Spencer Porter | 1995/05/05 | 2025/09/25
+
+Army | Julia Wallace | 1989/06/21 | 2025/02/02
+
+Air Force | Parker Woods | 1993/04/30 | 2025/05/10
+
+Army | Evan Knight | 1999/10/14 | 2025/10/24
+
+Navy | Adrian Gibson | 1988/01/27 | 2025/08/30
+
+Marine Corps | Colton Moore | 1996/07/15 | 2025/12/12
+
+Army | Savannah Myers | 1991/11/08 | 2025/04/20
+
+Air Force | Dominic Ford | 1985/08/19 | 2025/01/15
+
+Army | Wyatt Burns | 1994/03/06 | 2025/07/07
+
+Navy | Isabel Weaver | 1997/12/22 | 2025/11/18
+
+Marine Corps | Hunter Daniels | 1990/05/17 | 2025/03/09
+
+Army | Xavier Payne | 1992/02/11 | 2025/06/25
+
+Army | Grace Hudson | 1998/09/25 | 2025/10/14
+
+Air Force | Tristan Lane | 1987/04/04 | 2025/09/01
+
+Navy | Lydia Barker | 1995/01/31 | 2025/02/15
+
+Marine Corps | Garrett Fisher | 1993/08/08 | 2025/05/04
+
+Army | Riley Burton | 1986/12/15 | 2025/12/28
+
+Air Force | Jillian Rice | 1999/04/10 | 2025/08/11
+
+Army | Colton Weaver | 1991/06/04 | 2025/01/22
+
+Navy | Mason George | 1988/09/29 | 2025/04/12
+
+Marine Corps | Brody Mills | 1996/02/18 | 2025/07/30
+
+Army | Elena Wagner | 1994/11/11 | 2025/11/05
+
+Army | Nolan Harrison | 1985/03/21 | 2025/06/14
+
+Navy | Jade Johnston | 1997/06/27 | 2025/10/20
+
+Air Force | Silas Hoffman | 1992/10/03 | 2025/03/18
+
+Marine Corps | Micah Meyer | 1993/01/09 | 2025/09/09
+
+Army | Avery Ortega | 1990/07/18 | 2025/02/26
+
+Army | Elias Roman | 1998/12/05 | 2025/08/04
+
+Air Force | Aubrey Lucas | 1989/04/27 | 2025/12/31
+
+Navy | Malachi Sims | 1995/05/12 | 2025/05/18
+
+Marine Corps | Cooper Fox | 1986/08/30 | 2025/01/08
+
+Army | Skylar Ruiz | 1994/09/16 | 2025/07/22
+
+Army | Maxwell Day | 1991/02/08 | 2025/11/22
+
+Navy | Katelyn Todd | 1999/07/04 | 2025/04/25
+
+Air Force | Jonah Moss | 1987/11/23 | 2025/09/12
+
+Marine Corps | Ezra Kim | 1996/03/14 | 2025/06/05
+
+Army | Clara Rios | 1992/01/29 | 2025/10/08
+
+Navy | Miles Beck | 1990/08/02 | 2025/03/14
+
+Army | Easton Shaw | 1995/10/19 | 2025/12/24

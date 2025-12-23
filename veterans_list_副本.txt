@@ -1,0 +1,86 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait, Select
+from selenium.webdriver.support import expected_conditions as EC
+
+# --- 配置 ---
+DATA_FILE = "veterans_list.txt"
+TARGET_URL = "你的目标网址" # 请在此输入实际的验证页面地址
+FIXED_EMAIL = "6609993@gmail.com"
+
+def fill_sheerid_form():
+    # 初始化 Chrome 浏览器
+    driver = webdriver.Chrome()
+    wait = WebDriverWait(driver, 15)
+
+    try:
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+
+        for line in lines:
+            if "|" not in line: continue
+            # 数据格式：军种 | 姓名 | 出生日期 | 退役日期
+            service, name, dob, dor = [p.strip() for p in line.split("|")]
+            first_name = name.split()[0]
+            last_name = name.split()[-1]
+
+            driver.get(TARGET_URL)
+            
+            # 1. 选择 Status (固定选择：Military Veteran or Retiree)
+            # 先等待下拉框加载并点击
+            status_el = wait.until(EC.element_to_be_clickable((By.ID, "status")))
+            status_el.click()
+            time.sleep(0.5)
+            # 点击对应的选项
+            driver.find_element(By.XPATH, "//option[contains(text(), 'Military Veteran or Retiree')]").click()
+
+            # 2. 选择 Branch of service
+            branch_el = driver.find_element(By.ID, "service_branch")
+            branch_el.click()
+            time.sleep(0.5)
+            # 使用变量 service 匹配 (Army, Navy, 等)
+            driver.find_element(By.XPATH, f"//option[text()='{service}']").click()
+
+            # 3. 填写姓名
+            driver.find_element(By.ID, "firstName").send_keys(first_name)
+            driver.find_element(By.ID, "lastName").send_keys(last_name)
+
+            # 4. 填写 Date of Birth (格式 YYYY/MM/DD)
+            dob_y, dob_m, dob_d = dob.split('/')
+            # 月份下拉框选择 (value 通常是 1-12)
+            month_select = Select(driver.find_element(By.ID, "birthDate_month"))
+            month_select.select_by_value(str(int(dob_m))) # 去掉 01 中的 0
+            # 日与年输入框
+            driver.find_element(By.ID, "birthDate_day").send_keys(dob_d)
+            driver.find_element(By.ID, "birthDate_year").send_keys(dob_y)
+
+            # 5. 填写 Discharge Date (格式 2025/MM/DD)
+            dor_y, dor_m, dor_d = dor.split('/')
+            dor_month_select = Select(driver.find_element(By.ID, "dischargeDate_month"))
+            dor_month_select.select_by_value(str(int(dor_m)))
+            driver.find_element(By.ID, "dischargeDate_day").send_keys(dor_d)
+            driver.find_element(By.ID, "dischargeDate_year").send_keys(dor_y)
+
+            # 6. 填写指定 Email
+            email_field = driver.find_element(By.ID, "email")
+            email_field.clear() # 清空原有内容
+            email_field.send_keys(FIXED_EMAIL)
+
+            # 7. 点击提交按钮 (Verify My Eligibility)
+            # 为了安全，建议手动点击或确认后取消注释下行
+            # driver.find_element(By.ID, "submit").click()
+
+            print(f"成功为 {name} 填写表单")
+            
+            # 暂停一段时间，让你检查结果，或准备下一次循环
+            time.sleep(10) 
+
+    except Exception as e:
+        print(f"自动化执行中发生错误: {e}")
+    finally:
+        print("所有数据处理完毕。")
+        driver.quit()
+
+if __name__ == "__main__":
+    fill_sheerid_form()
