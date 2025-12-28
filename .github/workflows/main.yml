@@ -1,45 +1,24 @@
-name: SheerID Automation
+name: Manual Run Script
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # 允许你在 Actions 界面手动点击按钮运行
 
 jobs:
-  run-task:
+  execute:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Install Dependencies
+      - name: Install Tools
         run: |
-          pip install selenium webdriver-manager
+          pip install requests playwright
+          playwright install chromium
 
-      - name: Run Script
-        run: python run_task.py
-
-      - name: Upload Screenshot on Failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: error-screenshots
-          path: ./*.png
-
-      - name: Commit and Sync Logs
-        if: always() # 确保即使填表失败，已经跑过的信息也会被同步屏蔽
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git pull origin main --rebase
-          if [ -f used_records.txt ]; then
-            git add used_records.txt
-            git commit -m "Update logs [skip ci]" || echo "No changes"
-            git push origin main
-          fi
+      - name: Run
+        run: python main.py
