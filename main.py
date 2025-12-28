@@ -9,7 +9,7 @@ from playwright.async_api import async_playwright
 
 # ================= 配置区 =================
 # 在这里填入你的验证链接
-TARGET_VERIFY_URL = "https://services.sheerid.com/verify/690415d58971e73ca187d8c9/?verificationId=6950c5ae83811641c6eddb50"
+TARGET_VERIFY_URL = "https://services.sheerid.com/verify/690415d58971e73ca187d8c9/?verificationId=6950c6315f17c5392e7bd798"
 # ==========================================
 
 MAIL_TM_API = "https://api.mail.tm"
